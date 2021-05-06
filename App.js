@@ -24,7 +24,7 @@ export default function App() {
 	return (
 		<NavigationContainer>
 			<Drawer.Navigator 
-				initialRouteName="Home" 
+				initialRouteName="Crypto" 
 				drawerContent={props => <DrawerContent {...props} />}
 				drawerStyle={{
 					width: width*(2/3),

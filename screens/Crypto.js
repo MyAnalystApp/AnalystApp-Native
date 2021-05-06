@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Button, View, Text, TouchableOpacity, Image, ScrollView, Dimensions, Animated, ImageBackground, FlatList, LogBox } from 'react-native';
+import { StyleSheet, Button, View, Text, TouchableOpacity, Image, ScrollView, Dimensions, Animated, ImageBackground, FlatList, LogBox, ToastAndroid} from 'react-native';
 import CryptoHeader from '../components/Crypto/Home/CryptoHeader'
 import CryptoAbout from '../components/Crypto/Home/CryptoAbout'
 import CryptoFeature from '../components/Crypto/Home/CryptoFeature'
@@ -23,7 +23,10 @@ export default function Crypto({navigation}) {
                 <View style={{ flex: 1, justifyContent: 'center', backgroundColor: "white",}}>
                     <View style={{ flexDirection: 'row', marginTop: 10 , marginBottom: 10}}>
                         <TouchableOpacity   style={{ flex: 1,}} 
-                                onPress={() => navigation.toggleDrawer()}>
+                                // onPress={() => navigation.toggleDrawer()}
+                                onPress={() => ToastAndroid.show("Feature Available Soon...!", 20000)}
+                        >
+                            
                             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                                 <Image style={{marginLeft: 0, width: 27, height: 27, marginRight: 60 }} source={require('../assets/icons/menu.png')} />
                             </View>
